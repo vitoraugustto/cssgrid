@@ -20,7 +20,7 @@ html, body{
 }
 
 .grid-container header{
-    grid-column: 2 / span 3; /*1 /*/
+    grid-column: 1 / span 3; /*1 /*/
 }
 
 .grid-container nav{
@@ -31,13 +31,13 @@ html, body{
 .grid-container main{
     background-color: lightgray;
     padding: 20px;
-    grid-column: 2 / span 3; /*1 /*/
+    grid-column: 1 / span 3; /*1 /*/
 }
 
 .grid-container footer{
     background-color: lightgray;
     padding: 20px;
-    grid-column: 1 /span 4; /*span 3*/
+    grid-column: 1 /span 3; /*span 3*/
 }
 /*GRID*/
 
@@ -92,6 +92,7 @@ img.menu-hamburguer{
 }
 
 nav{
+    display: none;
     background-color: lightgray;
     padding: 20px;
     border-right: 2px solid gray;

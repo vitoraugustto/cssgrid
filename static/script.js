@@ -11,20 +11,19 @@ window.onload = function(){
         hamburguerState += 1;
         
         if(hamburguerState == 1){
-            nav.style.display = 'none';
-            header.style.gridColumn = '1 / span 3';
-            main.style.gridColumn = '1  / span 3';
-            footer.style.gridColumn = '1 / span 3';
-            
-        } else {
             nav.style.display = 'inline-block';
             header.style.gridColumn = '2 / span 3';
             main.style.gridColumn = '2  / span 3';
             footer.style.gridColumn = '1 / span 4';
 
-            hamburguerState = 0;
-        }
+        } else {
+            nav.style.display = 'none';
+            header.style.gridColumn = '1 / span 3';
+            main.style.gridColumn = '1  / span 3';
+            footer.style.gridColumn = '1 / span 3';
 
+            hamburguerState = 0;
+        };
     });
 
 };
