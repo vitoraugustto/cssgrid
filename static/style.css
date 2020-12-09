@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body{
+    height: 100%;
+}
+
+
+/*GRID*/
+.grid-container{
+    display: grid;
+    grid-template-columns: 230px;
+    grid-template-rows: auto;
+    grid-gap: 0px;
+    background-color: gray;
+}
+
+.grid-container header{
+    grid-column: 2 / span 3; /*1 /*/
+}
+
+.grid-container nav{
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+
+.grid-container main{
+    background-color: lightgray;
+    padding: 20px;
+    grid-column: 2 / span 3; /*1 /*/
+}
+
+.grid-container footer{
+    background-color: lightgray;
+    padding: 20px;
+    grid-column: 1 /span 4; /*span 3*/
+}
+/*GRID*/
+
+/*HEADER*/
+header{
+    background-color: lightgray;   
+    padding: 35px 20px; 
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid gray;
+}
+
+header .header-wrapper{
+    text-align: center;
+}
+
+header .logo{
+    display: inline-block;
+    background-color: gray;
+    width: 256px;
+    height: 64px;
+}
+
+header .logo-wrapper{
+    display: inline-block;
+    width: 50%;
+}
+
+header ul{
+    display: inline-block;
+    list-style-type: none;
+}
+
+header ul li{
+    display: inline-block;
+    background-color: gray;
+    width: 64px;
+    height: 64px;
+    border-radius: 2px;
+}
+/*HEADER*/
+
+
+/*NAV*/
+img.menu-hamburguer{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+nav{
+    background-color: lightgray;
+    padding: 20px;
+    border-right: 2px solid gray;
+}
+
+nav ul{
+    margin: 80px 0;
+    list-style: none;
+}
+
+nav ul li{
+    margin-bottom: 10px;
+    background-color: gray;
+    width: 100%;
+    height: 25px;
+}
+/*NAV*/
+
+
+/*MAIN*/
+main .box{
+    display: inline-block;
+    background-color: gray;
+    width: 23%;
+    height: 170px;
+    margin: 5px;
+    border-radius: 2px;
+}
+
+main .wrapper-boxes{
+    width: 100%;
+    text-align: center;
+}
+
+main h2{
+    display: inline-block;
+    margin: 0 0 17px 20px;
+    font-size: 30px;
+}
+/*MAIN*/
+
+/*FOOTER*/
+footer{
+    border-top: 2px solid gray;
+    text-align: center;
+}
+
+/*FOOTER*/
