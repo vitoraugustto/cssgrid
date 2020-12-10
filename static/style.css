@@ -70,8 +70,7 @@ img.menu-hamburguer{
 }
 
 .grid-container main{
-    background-color: lightgray;
-    padding: 20px;
+
     grid-column: 1 / span 3;
 }
 
@@ -121,6 +120,10 @@ header ul li{
     border-radius: 2px;
     margin-right: 20px;
 }
+
+header ul li:last-child{
+    margin-right: 0;
+}
 /*HEADER*/
 
 
@@ -134,7 +137,8 @@ nav{
     border-right: 2px solid gray;
     width: 300px;
     height: 100%;
-    transition: .4s linear;
+    transition: .4s ease-out;
+    box-shadow: 0 0 20px;
 }
 
 nav ul{
@@ -152,6 +156,11 @@ nav ul li{
 
 
 /*MAIN*/
+main{
+    background-color: lightgray;
+    padding: 20px 10px;
+}
+
 main .box{
     display: inline-block;
     background-color: gray;
@@ -189,13 +198,13 @@ footer{
     }
 
     100%{
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 }
 
 @keyframes contrastOut{
     0%{
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 
     100%{
@@ -224,3 +233,43 @@ footer{
 }
 
 /*ANIMATIONS*/
+
+/*RESPONSIVE*/
+@media screen and (max-width: 780px){
+    main .box{
+        width: 30%;
+    }
+
+    header{
+        padding: 10px;
+    }
+
+    header .logo-wrapper{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    main{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 680px){
+    main .box{
+        width: 45%;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 540px){
+    main .box{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 450px){
+    main .box{ 
+        width: 80%;
+    }
+}
+/*RESPONSIVE*/

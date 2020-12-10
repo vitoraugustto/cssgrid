@@ -5,15 +5,10 @@ window.onload = function(){
     }, 550);
 
 
-    const header = document.querySelector('header');
     const nav = document.querySelector('nav');
-    const main = document.querySelector('main');
-    const footer = document.querySelector('footer');
-
     const hamburguer = document.getElementById('hamburguer');
     const boxes = document.getElementById('wrapper-boxes');
     const lis = document.getElementsByTagName('li');
-
     const liWrapper = document.getElementById('li-wrapper');
 
 
@@ -31,7 +26,7 @@ window.onload = function(){
             liWrapper.classList.add('fadeOut');
 
             isOpen = 0;
-        }
+        };
 
 
         hamburguer.classList.remove('rotate');
