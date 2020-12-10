@@ -279,13 +279,7 @@ footer{
     }
 }
 
-@media screen and (max-width: 450px){
-    main .box{ 
-        width: 80%;
-    }
-}
-
-@media screen and (max-width: 395px){
+@media screen and (max-width: 425px){
     .grid-container{
         width: 100%;
         right: 0;
