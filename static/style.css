@@ -9,6 +9,25 @@ html, body{
     height: 100%;
 }
 
+body.preload *{
+    animation-duration: 0s !important;
+}
+
+img.menu-hamburguer{
+    z-index: 99;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.rotate{
+    transition: .7s ease-out;
+    transform: rotate(360deg);
+}
+
 .contrastIn{
     animation: contrastIn .1s forwards;
 }
@@ -17,18 +36,32 @@ html, body{
     animation: contrastOut .1s forwards;
 }
 
+.fadeIn{
+    animation: fadeIn .5s forwards;
+}
+
+.fadeOut{
+    animation: fadeOut .5s forwards;
+}
+
+/*************************************/
+
 
 /*GRID*/
 .grid-container{
+    position: relative;
     display: grid;
     grid-template-columns: 230px;
     grid-template-rows: auto;
     grid-gap: 0px;
     background-color: gray;
+    width: calc(100% - 100px);
+    right: -100px;
+    height: 100%;
 }
 
 .grid-container header{
-    grid-column: 1 / span 3; /*1 /*/
+    grid-column: 1 / span 3;
 }
 
 .grid-container nav{
@@ -39,15 +72,16 @@ html, body{
 .grid-container main{
     background-color: lightgray;
     padding: 20px;
-    grid-column: 1 / span 3; /*1 /*/
+    grid-column: 1 / span 3;
 }
 
 .grid-container footer{
     background-color: lightgray;
     padding: 20px;
-    grid-column: 1 /span 3; /*span 3*/
+    grid-column: 1 /span 3;
 }
 /*GRID*/
+
 
 /*HEADER*/
 header{
@@ -91,20 +125,16 @@ header ul li{
 
 
 /*NAV*/
-img.menu-hamburguer{
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-}
-
 nav{
-    display: none;
+    z-index: 98;
+    left: -200px;
+    position: fixed;
     background-color: lightgray;
     padding: 30px;
     border-right: 2px solid gray;
+    width: 300px;
+    height: 100%;
+    transition: .4s linear;
 }
 
 nav ul{
@@ -138,10 +168,11 @@ main #wrapper-boxes{
 
 main h2{
     display: inline-block;
-    margin: 0 0 17px 20px;
+    margin: 0 0 17px 31px;
     font-size: 30px;
 }
 /*MAIN*/
+
 
 /*FOOTER*/
 footer{
@@ -169,6 +200,26 @@ footer{
 
     100%{
         transform: scale(1);
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
     }
 }
 
