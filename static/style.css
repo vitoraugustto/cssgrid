@@ -141,6 +141,18 @@ nav{
     box-shadow: 0 0 20px;
 }
 
+nav#mobile{
+    z-index: 98;
+    display: none;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    border-right: 0px;
+    border-bottom: 2px solid gray;
+    top: -402px;
+    left: 0;
+}
+
 nav ul{
     margin: 80px 0;
     list-style: none;
@@ -271,5 +283,38 @@ footer{
     main .box{ 
         width: 80%;
     }
+}
+
+@media screen and (max-width: 395px){
+    .grid-container{
+        width: 100%;
+        right: 0;
+        top: 60px;
+    }
+
+    img.menu-hamburguer{
+        top: 15px;
+        left: 15px;
+        transition: .4s ease-out;
+    }
+    
+    nav#desktop{
+        display: none;
+    }
+
+    nav#mobile{
+        text-align: center;
+        display: inline-block;
+    }
+
+    nav#mobile ul{
+        margin: 55px 0;
+    }
+
+    nav#mobile li{
+        display: inline-block;
+        width: 60%;
+    }
+    
 }
 /*RESPONSIVE*/

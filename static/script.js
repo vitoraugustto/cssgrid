@@ -5,7 +5,8 @@ window.onload = function(){
     }, 550);
 
 
-    const nav = document.querySelector('nav');
+    const navDesktop = document.getElementById('desktop');
+    const navMobile = document.getElementById('mobile');
     const hamburguer = document.getElementById('hamburguer');
     const boxes = document.getElementById('wrapper-boxes');
     const lis = document.getElementsByTagName('li');
@@ -17,22 +18,37 @@ window.onload = function(){
         isOpen += 1;
 
         if (isOpen == 1) {
-            nav.style.left = '0'
+            navDesktop.style.left = '0'
+            navMobile.style.top = '0';
+
+            if (window.innerWidth <= 395) {
+                hamburguer.style.top = '419px';
+            };
+
             liWrapper.classList.add('fadeIn');
             liWrapper.classList.remove('fadeOut');
 
         } else {
-            nav.style.left = '-200px'
+            navDesktop.style.left = '-200px'
+            navMobile.style.top = '-402px'
+
             liWrapper.classList.add('fadeOut');
+
+            if (window.innerWidth <= 395) {
+                hamburguer.style.top = '15px';
+            };
 
             isOpen = 0;
         };
 
+        if ( window.innerWidth > 395 ){
+            hamburguer.classList.remove('rotate');
+            setTimeout( function() {
+                hamburguer.classList.add('rotate');
+            }, 1);
+        };
 
-        hamburguer.classList.remove('rotate');
-        setTimeout( function() {
-            hamburguer.classList.add('rotate');
-        }, 1)
+        
     });
 
     arrayLis = [...lis];
