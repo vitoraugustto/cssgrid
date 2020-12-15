@@ -75,8 +75,6 @@ img.menu-hamburguer{
 }
 
 .grid-container footer{
-    background-color: lightgray;
-    padding: 20px;
     grid-column: 1 /span 3;
 }
 /*GRID*/
@@ -197,6 +195,8 @@ main h2{
 
 /*FOOTER*/
 footer{
+    background-color: lightgray;
+    padding: 20px;
     border-top: 2px solid gray;
     text-align: center;
 }
@@ -308,6 +308,10 @@ footer{
     nav#mobile li{
         display: inline-block;
         width: 60%;
+    }
+
+    footer{
+        padding-bottom: 0px
     }
     
 }

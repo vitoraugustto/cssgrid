@@ -18,10 +18,10 @@ window.onload = function(){
         isOpen += 1;
 
         if (isOpen == 1) {
-            navDesktop.style.left = '0'
+            navDesktop.style.left = '0';
             navMobile.style.top = '0';
 
-            if (window.innerWidth <= 395) {
+            if (window.innerWidth <= 425) {
                 hamburguer.style.top = '419px';
             };
 
@@ -34,14 +34,14 @@ window.onload = function(){
 
             liWrapper.classList.add('fadeOut');
 
-            if (window.innerWidth <= 395) {
+            if (window.innerWidth <= 425) {
                 hamburguer.style.top = '15px';
             };
 
             isOpen = 0;
         };
 
-        if ( window.innerWidth > 395 ){
+        if (window.innerWidth > 425) {
             hamburguer.classList.remove('rotate');
             setTimeout( function() {
                 hamburguer.classList.add('rotate');
@@ -66,16 +66,19 @@ window.onload = function(){
         }));
 
 
-    function createBoxes(className) {
-        for ( var i = 0; i < 16; i++ ) {
-            const box = document.createElement('div');
-            //box.classList.add('box');
-
-            box.className = className;
-            boxes.appendChild(box);
+        if (innerWidth <= 425) {
+            function createBoxes(className) {
+                for ( var i = 0; i < 6; i++ ) {
+                    const box = document.createElement('div');
+                    //box.classList.add('box');
+        
+                    box.className = className;
+                    boxes.appendChild(box);
+                };
+            }; 
+            createBoxes('box');
         };
-    }; 
 
-    createBoxes('box');
+    
 
 };
