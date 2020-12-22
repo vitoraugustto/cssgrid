@@ -1,7 +1,7 @@
 window.onload = function(){
 
     setTimeout(function(){
-        document.body.className = '';
+        document.body.classList.remove('preload');
     }, 550);
 
 
@@ -14,7 +14,7 @@ window.onload = function(){
 
 
     var isOpen = 0;
-    hamburguer.addEventListener('click', function(){
+    hamburguer.addEventListener('click', function() {
         isOpen += 1;
 
         if (isOpen == 1) {
@@ -43,7 +43,7 @@ window.onload = function(){
 
         if (window.innerWidth > 425) {
             hamburguer.classList.remove('rotate');
-            setTimeout( function() {
+            setTimeout(function() {
                 hamburguer.classList.add('rotate');
             }, 1);
         };
@@ -64,14 +64,22 @@ window.onload = function(){
             li.classList.remove('contrastIn');
             li.classList.add('contrastOut');
         }));
-
-
+    
         if (innerWidth <= 425) {
             function createBoxes(className) {
-                for ( var i = 0; i < 6; i++ ) {
+                for (var i = 0; i < 6; i++) {
                     const box = document.createElement('div');
-                    //box.classList.add('box');
-        
+
+                    box.className = className;
+                    boxes.appendChild(box);
+                };
+            }; 
+            createBoxes('box');
+        } else {
+             function createBoxes(className) {
+                for (var i = 0; i < 16; i++) {
+                    const box = document.createElement('div');
+                    
                     box.className = className;
                     boxes.appendChild(box);
                 };
